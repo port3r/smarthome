@@ -13,7 +13,6 @@
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
 	<script src='https://rawgit.com/hiooyUI/simple-switch/master/jquery.simpleswitch.min.js'></script>
 
-	
 	<script>
 		jQuery(function($)
 		{
@@ -62,6 +61,7 @@
 	
 	<style>
 		.iost{position:relative;top:-6px;}
+		.badge { font-size: 14px !important;}
 	</style>
 
 	<title>My Home Assistant</title>
@@ -70,10 +70,11 @@
 	<div class='container-fluid'>   
 		<div class='row'>     
 			<div class='col-md-12'>       
-				<h1>MyHome <a href='/smarthome'><button class='btn btn-default btn-lg'><span class='fa fa-refresh' aria-hidden='true'></span></button></a></h1> 
+				<h2>MyHome <a href='/smarthome'><button class='btn btn-default btn-lg'><span class='fa fa-refresh' aria-hidden='true'></span></button></a></h2> 
 				<!-- Nav tabs -->
 				<ul class="nav nav-pills" role="tablist">
-					<li role="presentation" class="active"><a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab">Vetranie</a></li>
+					<li role="presentation"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+					<li role="presentation"><a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab">Vetranie</a></li>
 					<li role="presentation"><a href="#wifi" aria-controls="wifi" role="tab" data-toggle="tab">WiFi</a></li>
 					<li role="presentation"><a href="#zahrada" aria-controls="zahrada" role="tab" data-toggle="tab">Záhrada</a></li>
 				</ul>
@@ -82,19 +83,27 @@
 
 				<!-- Tab panes -->
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="vetranie">
+					<div role="tabpanel" class="tab-pane active" id="dashboard">
 						<ul class='list-group'>
-							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li> 
-							<li class='list-group-item'>Teplota v kúpelni v  &#8451; <span class='pull-right'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i></span></li>          
-							<li class='list-group-item'>Vlhkosť v kúpelni v % <span class='pull-right'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i></span></li>          
-							        
-							<li class='list-group-item'>Systémová teplota v  &#8451;<span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i></span></li>         
-							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-cmd='http://192.168.0.200/logger' unchecked /></span></li>          
-							         
-							<li class='list-group-item'>Manuálne spustenie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-cmd='http://192.168.0.200/toggle' unchecked /></span></li>          
-							<li class='list-group-item'>Dovolenkový režim <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-vacation' data-cmd='http://192.168.0.200/vacation' unchecked /></span></li>        
+							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li>
+							<li class='list-group-item'>Počasie <span class="badge">52%</span><span class="badge">25.5&#8451;</span></li>
+						</ul>					
+					</div>
+					
+					<div role="tabpanel" class="tab-pane" id="vetranie">
+						<ul class='list-group'>
+							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li>
+							<li class='list-group-item'>Teplota v kúpelni v &#8451; <span class='pull-right'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
+							<li class='list-group-item'>Vlhkosť v kúpelni v % <span class='pull-right'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
+
+							<li class='list-group-item'>Systémová teplota v  &#8451;<span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
+							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-cmd='http://192.168.0.200/logger' unchecked /></span></li>
+
+							<li class='list-group-item'>Manuálne spustenie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-cmd='http://192.168.0.200/toggle' unchecked /></span></li>
+							<li class='list-group-item'>Dovolenkový režim <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-vacation' data-cmd='http://192.168.0.200/vacation' unchecked /></span></li> 
 						</ul>
 					</div>
+					
 					<div role="tabpanel" class="tab-pane" id="wifi">...</div>
 					<div role="tabpanel" class="tab-pane" id="zahrada">...</div>
 				</div>   
