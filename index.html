@@ -29,13 +29,17 @@
 
 			$(document).on('click','.ios',function()
 			{
-				var cmd=$(this).data('cmd');
-				$.ajax({method:'GET',url:cmd})
+				var esp = $(this).data('esp'),
+					cmd = $(this).data('cmd'),
+					url = 'esp/' + esp +'.php?redirect=' + cmd; 
+				
+				$.ajax({method:'GET',url:url})
 			});
 
 			function fancontrol()
-			{
-				$.getScript("http://192.168.0.200/getdata.js", function()
+			{	
+				//$.getScript("http://192.168.0.200/getdata.js", function()
+				$.getScript("esp/fancontrol.php", function()
 				{
 					//-- SET SYSTEM TEMPERATURE
 					$('.fancontrol-systemp').text(fancontroldata.celsius);
@@ -55,6 +59,7 @@
 					if (fancontroldata.vacation == 'on') $('.fancontrol-vacation').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
 					else $('.fancontrol-vacation').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
 				});
+				
 			}
 		});
 	</script>
@@ -97,10 +102,10 @@
 							<li class='list-group-item'>Vlhkosť v kúpelni v % <span class='pull-right'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
 
 							<li class='list-group-item'>Systémová teplota v  &#8451;<span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
-							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-cmd='http://192.168.0.200/logger' unchecked /></span></li>
+							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
 
-							<li class='list-group-item'>Manuálne spustenie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-cmd='http://192.168.0.200/toggle' unchecked /></span></li>
-							<li class='list-group-item'>Dovolenkový režim <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-vacation' data-cmd='http://192.168.0.200/vacation' unchecked /></span></li> 
+							<li class='list-group-item'>Manuálne spustenie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' data-cmd='toggle' unchecked /></span></li>
+							<li class='list-group-item'>Dovolenkový režim <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-vacation' data-esp='fancontrol' data-cmd='vacation' unchecked /></span></li> 
 						</ul>
 					</div>
 					
