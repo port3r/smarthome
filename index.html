@@ -18,12 +18,19 @@
 		{
 			//-- INIT
 			fancontrol();
+			wunderground();
 
-			//-- EVERY 60s.
+			//-- EVERY 1min.
 			setInterval(function()
 			{ 
 			    fancontrol();
 			}, 60000);
+			
+			//-- EVERY 5min.
+			setInterval(function()
+			{ 
+			    wunderground();
+			}, 300000);
 
 			$('.ios').simpleSwitch();
 
@@ -61,6 +68,17 @@
 				});
 				
 			}
+			
+			function wunderground()
+			{
+				$.getScript("esp/wunderground.php", function()
+				{
+					$('.wunderground-location').text(dataWU.location);
+					$('.wunderground-date').text(dataWU.date);
+					$('.wunderground-temperature').text(dataWU.temperature + '&#8451;');
+					$('.wunderground-humidity').text(dataWU.humidity);
+				});				
+			}
 		});
 	</script>
 	
@@ -91,7 +109,7 @@
 					<div role="tabpanel" class="tab-pane active" id="dashboard">
 						<ul class='list-group'>
 							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li>
-							<li class='list-group-item'>Počasie <span class="badge">52%</span><span class="badge">25.5&#8451;</span></li>
+							<li class='list-group-item'>Počasie <span class='wunderground-location'></span> <span class='wunderground-date'></span> <span class="badge wunderground-humidity"></span><span class="badge wunderground-temperature"></span></li>
 						</ul>					
 					</div>
 					
@@ -101,7 +119,7 @@
 							<li class='list-group-item'>Teplota v kúpelni v &#8451; <span class='pull-right'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
 							<li class='list-group-item'>Vlhkosť v kúpelni v % <span class='pull-right'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
 
-							<li class='list-group-item'>Systémová teplota v  &#8451;<span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
+							<li class='list-group-item'>Systémová teplota v &#8451;<span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
 							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
 
 							<li class='list-group-item'>Manuálne spustenie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' data-cmd='toggle' unchecked /></span></li>
