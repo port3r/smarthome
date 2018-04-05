@@ -6,7 +6,7 @@
 	$data = $root->current_observation;
 
 	$content = 
-		'var wunderground = {'.
+		'var dataWU = {'.
 			'"date":"'. date('j.n G:i', $data->observation_epoch) .'",'.
 			'"location":"'. $data->display_location->full .'",'.
 			'"temperature":"'. $data->temp_c .'",'.
