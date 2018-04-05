@@ -13,6 +13,7 @@
 			'"feelslike":"'. $data->feelslike_c .'",'.
 			'"humidity":"'. $data->relative_humidity .'",'.
 			'"dewpoint":"'. $data->dewpoint_c .'",'.
+			'"icon":"'. (!empty($data->icon)? $data->icon_url:"") .'",'.
 			'"pressure":"'. $data->pressure_mb .'"'.
 		'};';
 
