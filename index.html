@@ -19,6 +19,7 @@
 			//-- INIT
 			fancontrol();
 			wunderground();
+			rtc();
 
 			//-- EVERY 1min.
 			setInterval(function()
@@ -81,6 +82,14 @@
 					$('.wunderground-feelslike').html(dataWU.feelslike + '&#8451');
 					$('.wunderground-dewpoint').html(dataWU.dewpoint + '&#8451');
 					$('.wunderground-icon').html("<img src='"+dataWU.icon+"' width='60' />");
+				});				
+			}
+
+			function rtc()
+			{
+				$.getScript("services/rtc.php", function()
+				{
+					console.log(dataRTC);
 				});				
 			}
 		});
