@@ -71,7 +71,7 @@
 			
 			function wunderground()
 			{
-				$.getScript("esp/wunderground.php", function()
+				$.getScript("services/wunderground.php", function()
 				{
 					$('.wunderground-location').text(dataWU.location);
 					$('.wunderground-date').text(dataWU.date);
