@@ -77,7 +77,10 @@
 					$('.wunderground-date').text(dataWU.date);
 					$('.wunderground-temperature').html(dataWU.temperature + '&#8451;');
 					$('.wunderground-humidity').text(dataWU.humidity);
-					$('.wunderground-icon').html("<img src='"+dataWU.icon+"' width='18' />");
+					$('.wunderground-pressure').html(dataWU.pressure + ' MPa');
+					$('.wunderground-feelslike').html(dataWU.feelslike + '&#8451');
+					$('.wunderground-dewpoint').html(dataWU.dewpoint + '&#8451');
+					$('.wunderground-icon').html("<img src='"+dataWU.icon+"' width='60' />");
 				});				
 			}
 		});
@@ -110,7 +113,22 @@
 					<div role="tabpanel" class="tab-pane active" id="dashboard">
 						<ul class='list-group'>
 							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li>
-							<li class='list-group-item'>Počasie - <span class='wunderground-location'></span> <span class='wunderground-date'></span> <span class='wunderground-icon'></span> <span class='pull-right'><span class="label label-default wunderground-humidity"><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span> <span class="label label-success wunderground-temperature"></span></span></li>
+							<li class='list-group-item'>
+								<h4 class='list-group-item-heading'>
+									Počasie - <span class='wunderground-location'></span>
+									<span class='pull-right wunderground-icon text-left'></span>
+								</h4>
+								<p class='list-group-item-text'>
+									<span class='pull-right'>
+										<span class="label label-default wunderground-humidity"><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span> 
+										<span class="label label-success wunderground-temperature"></span>
+									</span>									
+									Aktualizované <span class='wunderground-date'></span><br />
+									Pocitová teplota <span class="wunderground-feelslike"></span><br /> 
+									Rosný bod <span class="wunderground-dewpoint"></span><br />
+									Tlak vzduchu <span class="wunderground-pressure"></span>
+								</p>
+							</li>
 						</ul>					
 					</div>
 					
