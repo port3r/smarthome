@@ -54,7 +54,7 @@
 					
 					//-- SET BATHROOM STATES
 					$('.fancontrol-brtemperature').html(fancontroldata.brTemperature + '&#8451;');
-					$('.fancontrol-brhumidity').html(fancontroldata.brHumidity + '%');
+					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%');
 					
 					//-- SET FAN STATE
 					if (fancontroldata.fanstate == 'on') $('.fancontrol-fanstate').addClass('fa-spin');
