@@ -56,7 +56,7 @@
 					$('.fancontrol-brtemperature').html(fancontroldata.brTemperature + '&#8451;');
 					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%');
 					var brUpdateOn = new Date(fancontroldata.brUpdateOn * 1000);
-					$('.fancontrol-brUpdateOn').html(brUpdateOn.toString());
+					$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + '/' + brUpdateOn.getUTCHours() + '/' + brUpdateOn.getUTCMonth() + ' ' + brUpdateOn.getUTCHours() + ':' + brUpdateOn.getUTCMinutes());
 					
 					//-- SET FAN STATE
 					if (fancontroldata.fanstate == 'on') $('.fancontrol-fanstate').addClass('fa-spin');
