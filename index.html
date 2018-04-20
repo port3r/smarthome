@@ -68,6 +68,11 @@
 					if (fancontroldata.logger == 'on') $('.fancontrol-logger').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
 					else $('.fancontrol-logger').prop('checked', false).parent().removeClass('checked').addClass('unchecked');					
 
+					//-- SUMMER
+					if (fancontroldata.summer == 'on') $('.fancontrol-summer').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
+					else $('.fancontrol-summer').prop('checked', false).parent().removeClass('checked').addClass('unchecked');					
+
+					
 					//-- MANUAL
 					if (fancontroldata.fanCurrentState == 'on') $('.fancontrol-manual').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
 					else $('.fancontrol-manual').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
