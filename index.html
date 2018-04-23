@@ -58,9 +58,10 @@
 					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%');
 					
 					var brUpdateOn = new Date(fancontroldata.brUpdateOn * 1000);
-					var brHours = "0" + brUpdate.getUTCHours().slice(-2);
+					var brHours = "0" + brUpdateOn.getUTCHours().slice(-2);
+					var brMinutes = "0" + brUpdateOn.getUTCMinutes().slice(-2);
 					
-					$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + '. ' + months[brUpdateOn.getUTCMonth()] + '. ' + brHours + ':' + brUpdateOn.getUTCMinutes());
+					$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + '. ' + months[brUpdateOn.getUTCMonth()] + '. ' + brHours + ':' + brMinutes);
 					
 					//-- SET FAN STATE
 					if (fancontroldata.fanstate == 'on') $('.fancontrol-fanstate').addClass('fa-spin');
