@@ -107,7 +107,7 @@
 					//-- MANUAL
 					if (fancontroldata.fanCurrentState == 'on') 
 					{
-						$('.fancontrol-manual').data('cmd', 'fanOFF');
+						$('.fancontrol-manual').attr('data-cmd', 'fanOFF');
 						if (fancontroldata.manualFinish)
 						{
 							var manualFinishDate = new Date(fancontroldata.manualFinish * 1000);
@@ -120,7 +120,7 @@
 					}
 					else 
 					{
-						$('.fancontrol-manual').data('cmd', 'fanON');
+						$('.fancontrol-manual').attr('data-cmd', 'fanON');
 						$('.fancontrol-manual').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
 						$('.fancontrol-manual-end').html('');
 					}
