@@ -89,8 +89,16 @@
 					else $('.fancontrol-logger').prop('checked', false).parent().removeClass('checked').addClass('unchecked');					
 
 					//-- SUMMER
-					if (fancontroldata.summer == 'on') $('.fancontrol-summer').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
-					else $('.fancontrol-summer').prop('checked', false).parent().removeClass('checked').addClass('unchecked');					
+					if (fancontroldata.summer == 'on') 
+					{
+						$('.fancontrol-summer').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
+						$('.fancontrol-summer-sm-status').text('ZAP.');
+					}
+					else 
+					{
+						$('.fancontrol-summer').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
+						$('.fancontrol-summer-sm-status').text('VYP.');
+					}
 
 					//-- OFF
 					if (fancontroldata.fanoff == 'on') $('.fancontrol-off').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
@@ -192,7 +200,7 @@
 							<li class='list-group-item'>Manuálne spustenie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' data-cmd='toggle' unchecked /></span></li>
 							<li class='list-group-item'>Dovolenkový režim <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-vacation' data-esp='fancontrol' data-cmd='vacation' unchecked /></span></li>
 							
-							<li class='list-group-item'>Letný režim <a href="#vetranie-summer" class="rm-active" aria-controls="vetranie-summer" data-toggle="tab"><span class='pull-right iost'><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </span></a></li> 
+							<li class='list-group-item'>Letný režim <span class='pull-right iost'><small class="fancontrol-summer-sm-status"></small> &nbsp; <a href="#vetranie-summer" class="rm-active" aria-controls="vetranie-summer" data-toggle="tab"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li> 
 						</ul>
 					</div>
 					
