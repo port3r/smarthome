@@ -51,10 +51,10 @@
 				$.getScript("esp/fancontrol.php", function()
 				{
 					//-- SET SYSTEM TEMPERATURE
-					$('.fancontrol-systemp').html(fancontroldata.celsius + ' &#8451;');
+					$('.fancontrol-systemp').html((Math.round(fancontroldata.celsius * 10) / 10) + ' &#8451;');
 					
 					//-- SET BATHROOM STATES
-					$('.fancontrol-brtemperature').html(fancontroldata.brTemperature + ' &#8451;');
+					$('.fancontrol-brtemperature').html((Math.round(fancontroldata.brTemperature * 10) / 10) + ' &#8451;');
 					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + ' %');
 					
 					var brUpdateOn = new Date(fancontroldata.brUpdateOn * 1000);
