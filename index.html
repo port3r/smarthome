@@ -105,8 +105,23 @@
 					else $('.fancontrol-off').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
 					
 					//-- MANUAL
-					if (fancontroldata.fanCurrentState == 'on') $('.fancontrol-manual').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
-					else $('.fancontrol-manual').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
+					if (fancontroldata.fanCurrentState == 'on') 
+					{
+						if (fancontroldata.manualFinish)
+						{
+							var manualFinishDate = new Date(fancontroldata.manualFinish * 1000);
+							var hours = ("0" + manualFinishDate.getUTCHours()).slice(-2);
+							var minutes = ("0" + manualFinishDate.getUTCMinutes()).slice(-2);
+							$('.fancontrol-manual-end').html('<br />' + manualFinishDate.getUTCDate() + ' ' + months[manualFinishDate.getUTCMonth()] + '. ' + hours + ':' + minutes);
+						}
+						
+						$('.fancontrol-manual').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
+					}
+					else 
+					{
+						$('.fancontrol-manual').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
+						$('.fancontrol-manual-end').html('');
+					}
 
 					//-- VACATION
 					if (fancontroldata.vacation == 'on') $('.fancontrol-vacation').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
@@ -199,7 +214,7 @@
 							<li class='list-group-item'>Vypnúť <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-off' data-esp='fancontrol' data-cmd='off' unchecked /></span></li>
 							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
 
-							<li class='list-group-item'>Manuálne spustenie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' data-cmd='toggle' unchecked /></span></li>
+							<li class='list-group-item'>Manuálne spustenie <small class='fancontrol-manual-end text-muted'></small> <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' data-cmd='toggle' unchecked /></span></li>
 							<li class='list-group-item'>Dovolenkový režim <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-vacation' data-esp='fancontrol' data-cmd='vacation' unchecked /></span></li>
 							
 							<li class='list-group-item'>Letný režim <span class='pull-right iost rm-active'> <a href="#vetranie-summer" class="rm-active" aria-controls="vetranie-summer" data-toggle="tab"><small class="sm-status fancontrol-summer-sm-status"></small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li> 
