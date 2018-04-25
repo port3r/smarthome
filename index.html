@@ -51,17 +51,17 @@
 				$.getScript("esp/fancontrol.php", function()
 				{
 					//-- SET SYSTEM TEMPERATURE
-					$('.fancontrol-systemp').html(fancontroldata.celsius + '&#8451;');
+					$('.fancontrol-systemp').html(fancontroldata.celsius + ' &#8451;');
 					
 					//-- SET BATHROOM STATES
-					$('.fancontrol-brtemperature').html(fancontroldata.brTemperature + '&#8451;');
-					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%');
+					$('.fancontrol-brtemperature').html(fancontroldata.brTemperature + ' &#8451;');
+					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + ' %');
 					
 					var brUpdateOn = new Date(fancontroldata.brUpdateOn * 1000);
 					var brHours = ("0" + brUpdateOn.getUTCHours()).slice(-2);
 					var brMinutes = ("0" + brUpdateOn.getUTCMinutes()).slice(-2);
 					
-					$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + '. ' + months[brUpdateOn.getUTCMonth()] + '. ' + brHours + ':' + brMinutes);
+					$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + ' ' + months[brUpdateOn.getUTCMonth()] + '. ' + brHours + ':' + brMinutes);
 					
 					//-- SET FAN STATE
 					if (fancontroldata.fanstate == 'on') $('.fancontrol-fanstate').addClass('fa-spin');
@@ -75,6 +75,9 @@
 					if (fancontroldata.summer == 'on') $('.fancontrol-summer').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
 					else $('.fancontrol-summer').prop('checked', false).parent().removeClass('checked').addClass('unchecked');					
 
+					//-- OFF
+					if (fancontroldata.fanoff == 'on') $('.fancontrol-off').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
+					else $('.fancontrol-off').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
 					
 					//-- MANUAL
 					if (fancontroldata.fanCurrentState == 'on') $('.fancontrol-manual').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
@@ -93,11 +96,11 @@
 				{
 					$('.wunderground-location').text(dataWU.location);
 					$('.wunderground-date').text(dataWU.date);
-					$('.wunderground-temperature').html(dataWU.temperature + '&#8451;');
+					$('.wunderground-temperature').html(dataWU.temperature + ' &#8451;');
 					$('.wunderground-humidity').text(dataWU.humidity);
 					$('.wunderground-pressure').html(dataWU.pressure + ' hPa');
-					$('.wunderground-feelslike').html(dataWU.feelslike + '&#8451');
-					$('.wunderground-dewpoint').html(dataWU.dewpoint + '&#8451');
+					$('.wunderground-feelslike').html(dataWU.feelslike + ' &#8451');
+					$('.wunderground-dewpoint').html(dataWU.dewpoint + ' &#8451');
 					$('.wunderground-icon').html("<img src='"+dataWU.icon+"' width='60' />");
 				});				
 			}
@@ -106,7 +109,7 @@
 			{
 				$.getScript("services/rtc.php", function()
 				{
-					console.log(dataRTC);
+					//console.log(dataRTC);
 				});				
 			}
 		});
@@ -123,7 +126,7 @@
 	<div class='container-fluid'>   
 		<div class='row'>     
 			<div class='col-md-12'>       
-				<h2>MyHome <a href='/smarthome'><button class='btn btn-default btn-lg'><span class='fa fa-refresh' aria-hidden='true'></span></button></a></h2> 
+				<!--<h2>MyHome <a href='/smarthome'><button class='btn btn-default btn-lg'><span class='fa fa-refresh' aria-hidden='true'></span></button></a></h2> -->
 				<!-- Nav tabs -->
 				<ul class="nav nav-pills" role="tablist">
 					<li role="presentation"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i></a></li>
@@ -165,6 +168,7 @@
 							<li class='list-group-item'>Vlhkosť v kúpelni <span class='pull-right fancontrol-brhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
 
 							<li class='list-group-item'>Systémová teplota <span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
+							<li class='list-group-item'>Vypnúť <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-off' data-esp='fancontrol' data-cmd='off' unchecked /></span></li>
 							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
 
 							<li class='list-group-item'>Manuálne spustenie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' data-cmd='toggle' unchecked /></span></li>
