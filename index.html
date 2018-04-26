@@ -55,7 +55,10 @@
 					cmd = $(this).data('cmd'),
 					url = 'esp/' + esp +'.php?redirect=' + cmd; 
 				
-				$.ajax({method:'GET',url:url})
+				$.ajax({method:'GET',url:url}).done(function(result) 
+				{
+					if (esp == 'fancontrol') fancontrol();
+				});
 			});
 			
 			$(document).on('click','.rm-active',function()
