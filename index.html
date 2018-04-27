@@ -74,18 +74,26 @@
 					$('.fancontrol-systemp').html((Math.round(fancontroldata.celsius * 10) / 10) + ' &#8451;');
 					
 					//-- SET BATHROOM STATES
-					if (fancontroldata.brControl == 'on') $('.fancontrol-brControl').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
-					else $('.fancontrol-brControl').prop('checked', false).parent().removeClass('checked').addClass('unchecked');					
+					if (fancontroldata.brControl == 'on') 
+					{
+						$('.fancontrol-brControl').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
 					
-					var shower = (fancontroldata.brHumidity >= 70) ? ' &nbsp; <i class="fa fa-shower" aria-hidden="true"></i>' : '';
-					$('.fancontrol-brtemperature').html((Math.round(fancontroldata.brTemperature * 10) / 10) + ' &#8451;');
-					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%' + shower);
+						var shower = (fancontroldata.brHumidity >= 70) ? ' &nbsp; <i class="fa fa-shower" aria-hidden="true"></i>' : '';
+						$('.fancontrol-brtemperature').html((Math.round(fancontroldata.brTemperature * 10) / 10) + ' &#8451;');
+						$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%' + shower);
 					
-					var brUpdateOn = new Date(fancontroldata.brUpdateOn * 1000);
-					var brHours = ("0" + brUpdateOn.getUTCHours()).slice(-2);
-					var brMinutes = ("0" + brUpdateOn.getUTCMinutes()).slice(-2);
+						var brUpdateOn = new Date(fancontroldata.brUpdateOn * 1000);
+						var brHours = ("0" + brUpdateOn.getUTCHours()).slice(-2);
+						var brMinutes = ("0" + brUpdateOn.getUTCMinutes()).slice(-2);
 					
-					$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + ' ' + months[brUpdateOn.getUTCMonth()] + '. ' + brHours + ':' + brMinutes);
+						$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + ' ' + months[brUpdateOn.getUTCMonth()] + '. ' + brHours + ':' + brMinutes);
+					
+					}
+					else 
+					{
+						$('.fancontrol-brControl').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
+						$('.fancontrol-brhumidity').html('VYP.');
+					}
 					
 					//-- SET FAN STATE
 					if (fancontroldata.fanstate == 'on') $('.fancontrol-fanstate').addClass('fa-spin');
