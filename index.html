@@ -87,14 +87,15 @@
 						var brMinutes = ("0" + brUpdateOn.getUTCMinutes()).slice(-2);
 					
 						$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + ' ' + months[brUpdateOn.getUTCMonth()] + '. ' + brHours + ':' + brMinutes);
+						$('.fancontrol-brControl-sm-status').text('');
 						$('li.brControl').show();
 					}
 					else 
 					{
 						$('.fancontrol-brControl').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
-						$('.fancontrol-brhumidity').html('');
-						$('.fancontrol-brtemperature').html('');
-						$('.fancontrol-brControl-sm-status').html('VYP.');
+						$('.fancontrol-brhumidity').text('');
+						$('.fancontrol-brtemperature').text('');
+						$('.fancontrol-brControl-sm-status').text('VYP.');
 						$('li.brControl').hide();
 					}
 					
