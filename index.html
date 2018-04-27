@@ -74,8 +74,9 @@
 					$('.fancontrol-systemp').html((Math.round(fancontroldata.celsius * 10) / 10) + ' &#8451;');
 					
 					//-- SET BATHROOM STATES
+					var shower = (fancontroldata.brHumidity >= 70) ? '<i class="fa fa-shower" aria-hidden="true"></i>' : '';
 					$('.fancontrol-brtemperature').html((Math.round(fancontroldata.brTemperature * 10) / 10) + ' &#8451;');
-					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%');
+					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%' + shower);
 					
 					var brUpdateOn = new Date(fancontroldata.brUpdateOn * 1000);
 					var brHours = ("0" + brUpdateOn.getUTCHours()).slice(-2);
