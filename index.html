@@ -87,7 +87,7 @@
 						var brMinutes = ("0" + brUpdateOn.getUTCMinutes()).slice(-2);
 					
 						$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + ' ' + months[brUpdateOn.getUTCMonth()] + '. ' + brHours + ':' + brMinutes);
-					
+						$('li.brControl').show();
 					}
 					else 
 					{
@@ -95,6 +95,7 @@
 						$('.fancontrol-brhumidity').html('');
 						$('.fancontrol-brtemperature').html('');
 						$('.fancontrol-brControl-sm-status').html('VYP.');
+						$('li.brControl').hide();
 					}
 					
 					//-- SET FAN STATE
@@ -243,9 +244,9 @@
 						<a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab"><i class="fa fa-angle-left" aria-hidden="true"></i> &nbsp; Vetranie</a> &nbsp; <i class="fa fa-caret-right" aria-hidden="true"></i> &nbsp; <b>Kúpeľňa</b><br /><br />
 						<ul class='list-group'>
 							<li class='list-group-item'>Použiť dáta z kúpelne <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-brControl' data-esp='fancontrol' data-cmd='useBathroomData' unchecked /></span></li>
-							<li class='list-group-item'>Aktualizované <span class='pull-right fancontrol-brUpdateOn text-muted'></span></li>
-							<li class='list-group-item'>Teplota <span class='pull-right fancontrol-brtemperature'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
-							<li class='list-group-item'>Vlhkosť <span class='pull-right fancontrol-brhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
+							<li class='list-group-item brControl'>Aktualizované <span class='pull-right fancontrol-brUpdateOn text-muted'></span></li>
+							<li class='list-group-item brControl'>Teplota <span class='pull-right fancontrol-brtemperature'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
+							<li class='list-group-item brControl'>Vlhkosť <span class='pull-right fancontrol-brhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
 						</ul>	
 						<small>
 							Ak je povolené spracovanie dát z kúpelne, bude sa vetranie riadiť vlhkosťou v kúpelni. Pri vhlkosti vyššej ako 70% sa vetranie
