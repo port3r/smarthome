@@ -74,6 +74,9 @@
 					$('.fancontrol-systemp').html((Math.round(fancontroldata.celsius * 10) / 10) + ' &#8451;');
 					
 					//-- SET BATHROOM STATES
+					if (fancontroldata.brControl == 'on') $('.fancontrol-brControl').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
+					else $('.fancontrol-brControl').prop('checked', false).parent().removeClass('checked').addClass('unchecked');					
+					
 					var shower = (fancontroldata.brHumidity >= 70) ? ' &nbsp; <i class="fa fa-shower" aria-hidden="true"></i>' : '';
 					$('.fancontrol-brtemperature').html((Math.round(fancontroldata.brTemperature * 10) / 10) + ' &#8451;');
 					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%' + shower);
@@ -229,7 +232,7 @@
 					<div class="tab-pane" id="vetranie-bathroom">
 						<a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab"><i class="fa fa-angle-left" aria-hidden="true"></i> &nbsp; Vetranie</a> &nbsp; <i class="fa fa-caret-right" aria-hidden="true"></i> &nbsp; <b>Kúpeľňa</b><br /><br />
 						<ul class='list-group'>
-							<li class='list-group-item'>Použiť dáta z kúpelne <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-brUseData' data-esp='fancontrol' data-cmd='useBathroomData' unchecked /></span></li>
+							<li class='list-group-item'>Použiť dáta z kúpelne <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-brControl' data-esp='fancontrol' data-cmd='useBathroomData' unchecked /></span></li>
 							<li class='list-group-item'>Aktualizované <span class='pull-right fancontrol-brUpdateOn text-muted'></span></li>
 							<li class='list-group-item'>Teplota <span class='pull-right fancontrol-brtemperature'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
 							<li class='list-group-item'>Vlhkosť <span class='pull-right fancontrol-brhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
