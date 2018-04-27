@@ -214,22 +214,30 @@
 					<div class="tab-pane" id="vetranie">
 						<ul class='list-group'>
 							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li>
-							<li class='list-group-item'>Kúpelňa &nbsp; <small class='fancontrol-brUpdateOn text-muted'></small> <span class='pull-right rm-active'><a href="#vetranie-bathroom" class="rm-active" aria-controls="vetranie-bathroom" data-toggle="tab"><span class='sm-status fancontrol-brtemperature'></span> &nbsp; <span class='sm-status fancontrol-brhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li>
-							<li class='list-group-item'>Teplota v kúpelni<br /><small class='fancontrol-brUpdateOn text-muted'></small> <span class='pull-right fancontrol-brtemperature'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
-							<li class='list-group-item'>Vlhkosť v kúpelni <span class='pull-right fancontrol-brhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
-
+							<li class='list-group-item'>Kúpeľňa &nbsp; <small class='fancontrol-brUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><a href="#vetranie-bathroom" class="rm-active" aria-controls="vetranie-bathroom" data-toggle="tab"><span class='fancontrol-brtemperature'></span> &nbsp; <span class='fancontrol-brhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li>
 							<li class='list-group-item'>Systémová teplota <span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
 							<li class='list-group-item'>Vypnúť <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-off' data-esp='fancontrol' data-cmd='off' unchecked /></span></li>
 							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
-
 							<li class='list-group-item'>Manuálne spustenie <small class='fancontrol-manual-end text-muted'></small> <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' unchecked /></span></li>
 							<li class='list-group-item'>Dovolenkový režim <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-vacation' data-esp='fancontrol' data-cmd='vacation' unchecked /></span></li>
-							
 							<li class='list-group-item'>Letný režim <span class='pull-right iost rm-active'> <a href="#vetranie-summer" class="rm-active" aria-controls="vetranie-summer" data-toggle="tab"><small class="sm-status fancontrol-summer-sm-status"></small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li> 
 						</ul>
 					</div>
 					
 					<!-- SUBPAGES FOR VETRANIE START -->
+					<div class="tab-pane" id="vetranie-bathroom">
+						<a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab"><i class="fa fa-angle-left" aria-hidden="true"></i> &nbsp; Vetranie</a> &nbsp; <i class="fa fa-caret-right" aria-hidden="true"></i> &nbsp; <b>Kúpeľňa</b><br /><br />
+						<ul class='list-group'>
+							<li class='list-group-item'>Použiť dáta z kúpelne <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-brUseData' data-esp='fancontrol' data-cmd='useBathroomData' unchecked /></span></li>
+							<li class='list-group-item'>Teplota v kúpelni<br /><small class='fancontrol-brUpdateOn text-muted'></small> <span class='pull-right fancontrol-brtemperature'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
+							<li class='list-group-item'>Vlhkosť v kúpelni <span class='pull-right fancontrol-brhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
+						</ul>	
+						<small>
+							Ak je povolené spracovanie dát z kúpelne, bude sa vetranie riadiť vlhkosťou v kúpelni. Pri vhlkosti vyššej ako 70% sa vetranie
+							zapne a bude zapnuté ak vlhkosť neklesne pod 68%.
+						</small>
+					</div>
+					
 					<div class="tab-pane" id="vetranie-summer">
 						<a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab"><i class="fa fa-angle-left" aria-hidden="true"></i> &nbsp; Vetranie</a> &nbsp; <i class="fa fa-caret-right" aria-hidden="true"></i> &nbsp; <b>Letný režim</b><br /><br />
 						<ul class='list-group'>
