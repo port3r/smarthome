@@ -78,8 +78,8 @@
 					{
 						$('.fancontrol-brControl').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
 					
-						var shower = (fancontroldata.brHumidity >= 70) ? ' &nbsp; <i class="fa fa-shower" aria-hidden="true"></i>' : '';
-						$('.fancontrol-brtemperature').html((Math.round(fancontroldata.brTemperature * 10) / 10) + ' &#8451;');
+						var shower = (fancontroldata.brHumidity >= 70) ? ' &nbsp;<i class="fa fa-shower" aria-hidden="true"></i>' : '';
+						$('.fancontrol-brtemperature').html((Math.round(fancontroldata.brTemperature * 10) / 10) + '°');
 						$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%' + shower);
 					
 						var brUpdateOn = new Date(fancontroldata.brUpdateOn * 1000);
