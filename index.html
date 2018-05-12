@@ -72,8 +72,11 @@
 				{
 					//-- SET SYSTEM TEMPERATURE
 					//$('.fancontrol-systemp').html((Math.round(fancontroldata.celsius * 10) / 10) + ' &#8451;');
-					$('.fancontrol-airtemperature').html((Math.round(fancontroldata.outsideTemperature * 10) / 10) + '°');
-					$('.fancontrol-airhumidity').html(Math.round(fancontroldata.outsideHumidity) + '%');
+					if (fancontroldata.outsideTemperature != 'nan')
+					{
+						$('.fancontrol-airtemperature').html((Math.round(fancontroldata.outsideTemperature * 10) / 10) + '°');
+						$('.fancontrol-airhumidity').html(Math.round(fancontroldata.outsideHumidity) + '%');
+					}
 					
 					//-- SET BATHROOM STATES
 					if (fancontroldata.brControl == 'on') 
