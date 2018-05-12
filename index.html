@@ -71,7 +71,9 @@
 				$.getScript("esp/fancontrol.php", function()
 				{
 					//-- SET SYSTEM TEMPERATURE
-					$('.fancontrol-systemp').html((Math.round(fancontroldata.celsius * 10) / 10) + ' &#8451;');
+					//$('.fancontrol-systemp').html((Math.round(fancontroldata.celsius * 10) / 10) + ' &#8451;');
+					$('.fancontrol-airtemperature').html(Math.round(fancontroldata.outsideTemperature * 10) / 10) + '°');
+					$('.fancontrol-airhumidity').html(Math.round(fancontroldata.outsideHumidity) + '%');
 					
 					//-- SET BATHROOM STATES
 					if (fancontroldata.brControl == 'on') 
@@ -230,9 +232,9 @@
 					<div class="tab-pane" id="vetranie">
 						<ul class='list-group'>
 							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li>
-							<li class='list-group-item'>Vzduch &nbsp;<small class='fancontrol-airUpdateOn text-muted'></small> <span class='pull-right'><span class='fancontrol-airtemperature'></span> &nbsp;<span class='fancontrol-airhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i></span></span></li>
+							<li class='list-group-item'>Vonku &nbsp;<small class='fancontrol-airUpdateOn text-muted'></small> <span class='pull-right'><span class='fancontrol-airtemperature'></span> &nbsp;<span class='fancontrol-airhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i></span></span></li>
 							<li class='list-group-item'>Kúpeľňa &nbsp;<small class='fancontrol-brUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><a href="#vetranie-bathroom" class="rm-active" aria-controls="vetranie-bathroom" data-toggle="tab"><span class='sm-status fancontrol-brtemperature'></span> &nbsp;<span class='sm-status fancontrol-brhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i></span><small class="sm-status fancontrol-brControl-sm-status"></small> &nbsp;<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li>
-							<li class='list-group-item'>Systémová teplota <span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>
+							<!--<li class='list-group-item'>Systémová teplota <span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>-->
 							<li class='list-group-item'>Vypnúť <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-off' data-esp='fancontrol' data-cmd='off' unchecked /></span></li>
 							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
 							<li class='list-group-item'>Manuálne spustenie <small class='fancontrol-manual-end text-muted'></small> <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' unchecked /></span></li>
