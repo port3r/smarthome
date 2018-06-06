@@ -170,7 +170,11 @@
 					$('.wunderground-feelslike').html(dataWU.feelslike + ' &#8451');
 					$('.wunderground-dewpoint').html(dataWU.dewpoint + ' &#8451');
 					$('.wunderground-icon').html("<img src='"+dataWU.icon+"' width='60' />");
-				});				
+					
+					// SEND DATA TO FANCONTROL
+					var url = 'esp/fancontrol.php?redirect=weather&t='+ dataWU.temperature +'&h='+ dataWU.humidity; 
+					$.ajax({method:'GET', url:url});
+				});
 			}
 
 			function rtc()
