@@ -105,18 +105,17 @@
 					}
 					
 					//-- WEATHER
+					$('.fancontrol-wutemperature').html((Math.round(fancontroldata.wuTemperature * 10) / 10) + '°');
+					$('.fancontrol-wuhumidity').html(Math.round(fancontroldata.wuHumidity) + '%');
+					
+					var wuUpdateOn = new Date(fancontroldata.wuUpdateOn * 1000);
+					var wuHours = ("0" + wuUpdateOn.getUTCHours()).slice(-2);
+					var wuMinutes = ("0" + wuUpdateOn.getUTCMinutes()).slice(-2);
+					$('.fancontrol-wuUpdateOn').html(wuUpdateOn.getUTCDate() + ' ' + months[wuUpdateOn.getUTCMonth()] + '. ' + wuHours + ':' + wuMinutes);
+						
 					if (fancontroldata.wuControl == 'on') 
 					{
 						$('.fancontrol-wuControl').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
-					
-						$('.fancontrol-wutemperature').html((Math.round(fancontroldata.wuTemperature * 10) / 10) + '°');
-						$('.fancontrol-wuhumidity').html(Math.round(fancontroldata.wuHumidity) + '%');
-					
-						var wuUpdateOn = new Date(fancontroldata.wuUpdateOn * 1000);
-						var wuHours = ("0" + wuUpdateOn.getUTCHours()).slice(-2);
-						var wuMinutes = ("0" + wuUpdateOn.getUTCMinutes()).slice(-2);
-					
-						$('.fancontrol-wuUpdateOn').html(wuUpdateOn.getUTCDate() + ' ' + months[wuUpdateOn.getUTCMonth()] + '. ' + wuHours + ':' + wuMinutes);
 						$('.fancontrol-wuControl-sm-status').text('');
 						$('li.wuControl').show();
 					}
