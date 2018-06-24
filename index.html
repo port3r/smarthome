@@ -164,7 +164,7 @@
 							var manualFinishDate = new Date(fancontroldata.manualFinish * 1000);
 							var hours = ("0" + manualFinishDate.getUTCHours()).slice(-2);
 							var minutes = ("0" + manualFinishDate.getUTCMinutes()).slice(-2);
-							$('.fancontrol-manual-end').html('<br />' + manualFinishDate.getUTCDate() + ' ' + months[manualFinishDate.getUTCMonth()] + '. ' + hours + ':' + minutes);
+							$('.fancontrol-manual-end').html('<br />do ' + manualFinishDate.getUTCDate() + ' ' + months[manualFinishDate.getUTCMonth()] + '. ' + hours + ':' + minutes);
 						}
 						
 						$('.fancontrol-manual').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
