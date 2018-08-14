@@ -248,7 +248,6 @@
 				<ul class="nav nav-pills" role="tablist">
 					<li role="presentation"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 					<li role="presentation"><a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab">Vetranie</a></li>
-					<li role="presentation"><a href="#wifi" aria-controls="wifi" role="tab" data-toggle="tab">WiFi</a></li>
 					<li role="presentation"><a href="#zahrada" aria-controls="zahrada" role="tab" data-toggle="tab">Záhrada</a></li>
 				</ul>
 
@@ -336,14 +335,9 @@
 					</div>					
 					<!-- SUBPAGES FOR VETRANIE END -->
 					
-					<div role="tabpanel" class="tab-pane" id="wifi">
-						<ul class='list-group'>
-							<li class='list-group-item'>AP - Simon <span class='pull-right iost'><input type='checkbox' class='ios wifi-ap1' data-esp='' data-cmd='' unchecked /></span></li>
-							<li class='list-group-item'>AP - David <span class='pull-right iost rm-active'> <a href="#wifi-ap2" class="rm-active" aria-controls="wifi-ap2" data-toggle="tab"><small class="sm-status wifi-ap2-sm-status"></small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li> 
-						</ul>
-					</div>
 					<div role="tabpanel" class="tab-pane" id="zahrada">
 						<ul class='list-group'>
+							<li class='list-group-item'>Ovládanie brány <span class='pull-right iost'><input type='checkbox' class='ios zahrada-gate' data-esp='' data-cmd='' unchecked /></span></li>
 							<li class='list-group-item'>Filtrácia bazéna <span class='pull-right iost'><input type='checkbox' class='ios zahrada-bazen' data-esp='' data-cmd='' unchecked /></span></li>							
 							<li class='list-group-item'>Kvalita vody <span class='pull-right iost rm-active'> <a href="#zahrada-bazen" class="rm-active" aria-controls="zahrada-bazen" data-toggle="tab"><small class="sm-status zahrada-bazen-sm-status">PH 6.3, 26.4 &#8451;</small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li> 
 						</ul>
