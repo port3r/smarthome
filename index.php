@@ -337,7 +337,7 @@
 					
 					<div role="tabpanel" class="tab-pane" id="zahrada">
 						<ul class='list-group'>
-							<li class='list-group-item'>Ovládanie brány <span class='pull-right iost'><input type='checkbox' class='ios zahrada-gate' data-esp='' data-cmd='' unchecked /></span></li>
+							<li class='list-group-item'>Ovládanie brány <span class='pull-right iost'><a href='javascript:void(0)' class='ios' data-esp='' data-cmd=''><i class="fa fa-exchange fa-2x" aria-hidden="true"></i></a></span></li>
 							<li class='list-group-item'>Filtrácia bazéna <span class='pull-right iost'><input type='checkbox' class='ios zahrada-bazen' data-esp='' data-cmd='' unchecked /></span></li>							
 							<li class='list-group-item'>Kvalita vody <span class='pull-right iost rm-active'> <a href="#zahrada-bazen" class="rm-active" aria-controls="zahrada-bazen" data-toggle="tab"><small class="sm-status zahrada-bazen-sm-status">PH 6.3, 26.4 &#8451;</small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li> 
 						</ul>
