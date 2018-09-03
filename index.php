@@ -63,13 +63,17 @@
 
 			$(document).on('click','.ios,.aos', function()
 			{
-				if (isDoubleClicked($(this), 3000)) return;
 				var 
 					$this = $(this),
 					esp = $(this).data('esp'),
 					cmd = $(this).data('cmd'),
 				    	wait = $(this).data('wait'),
 					url = 'esp/' + esp +'.php?redirect=' + cmd; 
+				
+				if (wait && wait > 0)
+				{
+					if (isDoubleClicked($(this), wait)) return;
+				}
 				
 				console.log('go!');
 				
@@ -299,7 +303,7 @@
 							<li class='list-group-item'>Počasie OWM &nbsp;<small class='fancontrol-wuUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><a href="#vetranie-wunderground" class="rm-active" aria-controls="vetranie-wunderground" data-toggle="tab"><span class='sm-status fancontrol-wutemperature'></span> &nbsp;<span class='sm-status fancontrol-wuhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i></span><small class="sm-status fancontrol-wuControl-sm-status"></small> &nbsp;<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li>
 							<!--<li class='list-group-item'>Systémová teplota <span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>-->
 							<li class='list-group-item'>Vypnúť <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-off' data-esp='fancontrol' data-cmd='off' unchecked /></span></li>
-							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
+							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-wait='3000' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
 							<li class='list-group-item'><span class='manualormaintenance'>Manuálne spustenie</span> <small class='fancontrol-manual-end text-muted'></small> <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' unchecked /></span></li>
 							<li class='list-group-item'>Dovolenkový režim <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-vacation' data-esp='fancontrol' data-cmd='vacation' unchecked /></span></li>
 							<li class='list-group-item'>Letný režim <span class='pull-right iost rm-active'> <a href="#vetranie-summer" class="rm-active" aria-controls="vetranie-summer" data-toggle="tab"><small class="sm-status fancontrol-summer-sm-status"></small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li> 
