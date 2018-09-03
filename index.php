@@ -75,8 +75,6 @@
 					if (isDoubleClicked($(this), wait)) return;
 				}
 				
-				console.log('go!');
-				
 				$.ajax({method:'GET',url:url}).done(function(result) 
 				{
 					if (esp == 'fancontrol') fancontrol();
@@ -303,7 +301,7 @@
 							<li class='list-group-item'>Počasie OWM &nbsp;<small class='fancontrol-wuUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><a href="#vetranie-wunderground" class="rm-active" aria-controls="vetranie-wunderground" data-toggle="tab"><span class='sm-status fancontrol-wutemperature'></span> &nbsp;<span class='sm-status fancontrol-wuhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i></span><small class="sm-status fancontrol-wuControl-sm-status"></small> &nbsp;<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li>
 							<!--<li class='list-group-item'>Systémová teplota <span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>-->
 							<li class='list-group-item'>Vypnúť <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-off' data-esp='fancontrol' data-cmd='off' unchecked /></span></li>
-							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-wait='3000' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
+							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
 							<li class='list-group-item'><span class='manualormaintenance'>Manuálne spustenie</span> <small class='fancontrol-manual-end text-muted'></small> <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' unchecked /></span></li>
 							<li class='list-group-item'>Dovolenkový režim <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-vacation' data-esp='fancontrol' data-cmd='vacation' unchecked /></span></li>
 							<li class='list-group-item'>Letný režim <span class='pull-right iost rm-active'> <a href="#vetranie-summer" class="rm-active" aria-controls="vetranie-summer" data-toggle="tab"><small class="sm-status fancontrol-summer-sm-status"></small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li> 
@@ -355,7 +353,7 @@
 					
 					<div role="tabpanel" class="tab-pane" id="zahrada">
 						<ul class='list-group'>
-							<li class='list-group-item'>Ovládanie brány <span class='pull-right iost'><a href='javascript:void(0)' class='aos' data-esp='gate' data-cmd='toggle'><i class="fa fa-exchange fa-2x" aria-hidden="true"></i></a></span></li>
+							<li class='list-group-item'>Ovládanie brány <span class='pull-right iost'><a href='javascript:void(0)' class='aos' data-wait='3000' data-esp='gate' data-cmd='toggle'><i class="fa fa-exchange fa-2x" aria-hidden="true"></i></a></span></li>
 							<li class='list-group-item'>Filtrácia bazéna <span class='pull-right iost'><input type='checkbox' class='ios zahrada-bazen' data-esp='' data-cmd='' unchecked /></span></li>							
 							<li class='list-group-item'>Kvalita vody <span class='pull-right iost rm-active'> <a href="#zahrada-bazen" class="rm-active" aria-controls="zahrada-bazen" data-toggle="tab"><small class="sm-status zahrada-bazen-sm-status">PH 6.3, 26.4 &#8451;</small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li> 
 						</ul>
