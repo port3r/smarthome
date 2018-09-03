@@ -41,7 +41,8 @@
 		jQuery(function($)
 		{
 			var months = ['Jan','Feb','Mar','Apr','Máj','Jún','Júl','Aug','Sep','Okt','Nov','Dec'];
-			
+			$.wait = function(callback,seconds){return window.setTimeout(callback,seconds*1000);
+}
 			//-- INIT
 			fancontrol();
 			wunderground();
@@ -68,14 +69,12 @@
 				    	wait = $(this).data('wait'),
 					url = 'esp/' + esp +'.php?redirect=' + cmd; 
 				
-				setTimeout(function()
-				{
-					console.log('go!');
+				$.wait(
 					$.ajax({method:'GET',url:url}).done(function(result) 
 					{
 						if (esp == 'fancontrol') fancontrol();
-					});
-				}, 3000);
+					})
+				, 3000);
 			});
 			
 			$(document).on('click','.rm-active',function()
