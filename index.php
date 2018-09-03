@@ -69,12 +69,14 @@
 				    	wait = $(this).data('wait'),
 					url = 'esp/' + esp +'.php?redirect=' + cmd; 
 				
-				$.wait(
+				$.wait(function()
+				{
+					console.log('go!');
 					$.ajax({method:'GET',url:url}).done(function(result) 
 					{
 						if (esp == 'fancontrol') fancontrol();
-					})
-				, 3);
+					});
+				}, 3);
 			});
 			
 			$(document).on('click','.rm-active',function()
