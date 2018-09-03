@@ -74,7 +74,7 @@
 				console.log('go!');
 				$.ajax({method:'GET',url:url}).done(function(result) 
 				{
-					$this.hide();
+					$this.parent().hide();
 					if (esp == 'fancontrol') fancontrol();
 				});
 				
@@ -82,7 +82,7 @@
 				$.wait(function()
 				{
 					console.log('wait');
-					$this.show();
+					$this.parent().show();
 				}, 3);
 			});
 			
