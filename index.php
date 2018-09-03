@@ -71,13 +71,13 @@
 					url = 'esp/' + esp +'.php?redirect=' + cmd; 
 				
 				console.log('go!');
-				$(this).parent().parent().hide();
-				$.ajax({async:false,method:'GET',url:url}).done(function(result) 
+				
+				$.ajax({method:'GET',url:url}).done(function(result) 
 				{
 					if (esp == 'fancontrol') fancontrol();
 				});
 				
-				$(this).parent().parent().delay(3000).show();
+				$(this).parent().parent().hide().delay(3000).show();
 			});
 			
 			$(document).on('click','.rm-active',function()
