@@ -64,7 +64,9 @@
 
 			$(document).on('click','.ios,.aos', function()
 			{
-				var esp = $(this).data('esp'),
+				var 
+					$this = $(this),
+					esp = $(this).data('esp'),
 					cmd = $(this).data('cmd'),
 				    	wait = $(this).data('wait'),
 					url = 'esp/' + esp +'.php?redirect=' + cmd; 
@@ -72,10 +74,16 @@
 				console.log('go!');
 				$.ajax({method:'GET',url:url}).done(function(result) 
 				{
+					$this.hide();
 					if (esp == 'fancontrol') fancontrol();
 				});
 				
-				$.wait(function(){console.log('wait')}, 3);
+				
+				$.wait(function()
+				{
+					console.log('wait');
+					$this.show();
+				}, 3);
 			});
 			
 			$(document).on('click','.rm-active',function()
