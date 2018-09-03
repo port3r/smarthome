@@ -63,6 +63,7 @@
 
 			$(document).on('click','.ios,.aos', function()
 			{
+				if (isDoubleClicked($(this))) return;
 				var 
 					$this = $(this),
 					esp = $(this).data('esp'),
@@ -76,8 +77,6 @@
 				{
 					if (esp == 'fancontrol') fancontrol();
 				});
-				
-				$(this).parent().parent().hide().delay(3000).show();
 			});
 			
 			$(document).on('click','.rm-active',function()
@@ -232,6 +231,14 @@
 				{
 					//console.log(dataRTC);
 				});				
+			}
+			
+			function isDoubleClicked(element) 
+			{
+				if (element.data("isclicked")) return true;
+				element.data("isclicked", true);
+				setTimeout(function(){element.removeData("isclicked");}, 1000);
+				return false;
 			}
 		});
 	</script>
