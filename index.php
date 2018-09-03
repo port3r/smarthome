@@ -62,7 +62,7 @@
 
 			$('.ios').simpleSwitch();
 
-			$(document).on('click','.ios,.aos', $.wait(function()
+			$(document).on('click','.ios,.aos', function()
 			{
 				var esp = $(this).data('esp'),
 					cmd = $(this).data('cmd'),
@@ -74,7 +74,9 @@
 				{
 					if (esp == 'fancontrol') fancontrol();
 				});
-			}, 3));
+				
+				$.wait(console.log('wait'), 3);
+			});
 			
 			$(document).on('click','.rm-active',function()
 			{
