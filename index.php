@@ -74,7 +74,7 @@
 					{
 						if (esp == 'fancontrol') fancontrol();
 					})
-				, 3000);
+				, 3);
 			});
 			
 			$(document).on('click','.rm-active',function()
