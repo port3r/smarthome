@@ -70,6 +70,7 @@
 				
 				setTimeout(function()
 				{
+					console.log('go!');
 					$.ajax({method:'GET',url:url}).done(function(result) 
 					{
 						if (esp == 'fancontrol') fancontrol();
