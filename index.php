@@ -65,12 +65,16 @@
 			{
 				var esp = $(this).data('esp'),
 					cmd = $(this).data('cmd'),
+				    	wait = $(this).data('wait'),
 					url = 'esp/' + esp +'.php?redirect=' + cmd; 
 				
-				$.ajax({method:'GET',url:url}).done(function(result) 
+				setTimeout(function()
 				{
-					if (esp == 'fancontrol') fancontrol();
-				});
+					$.ajax({method:'GET',url:url}).done(function(result) 
+					{
+						if (esp == 'fancontrol') fancontrol();
+					});
+				}, 3000);
 			});
 			
 			$(document).on('click','.rm-active',function()
