@@ -63,7 +63,7 @@
 
 			$(document).on('click','.ios,.aos', function()
 			{
-				if (isDoubleClicked($(this))) return;
+				if (isDoubleClicked($(this), 3000)) return;
 				var 
 					$this = $(this),
 					esp = $(this).data('esp'),
@@ -233,11 +233,11 @@
 				});				
 			}
 			
-			function isDoubleClicked(element) 
+			function isDoubleClicked(element, delaytime) 
 			{
 				if (element.data("isclicked")) return true;
 				element.data("isclicked", true);
-				setTimeout(function(){element.removeData("isclicked");}, 1000);
+				setTimeout(function(){element.removeData("isclicked");}, delaytime);
 				return false;
 			}
 		});
