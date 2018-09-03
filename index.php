@@ -75,7 +75,7 @@
 					if (esp == 'fancontrol') fancontrol();
 				});
 				
-				$.wait(console.log('wait'), 3);
+				$.wait(function(){console.log('wait')}, 3);
 			});
 			
 			$(document).on('click','.rm-active',function()
