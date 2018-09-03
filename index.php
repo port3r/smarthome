@@ -62,22 +62,19 @@
 
 			$('.ios').simpleSwitch();
 
-			$(document).on('click','.ios,.aos',function()
+			$(document).on('click','.ios,.aos', $.wait(function()
 			{
 				var esp = $(this).data('esp'),
 					cmd = $(this).data('cmd'),
 				    	wait = $(this).data('wait'),
 					url = 'esp/' + esp +'.php?redirect=' + cmd; 
 				
-				$.wait(function()
+				console.log('go!');
+				$.ajax({method:'GET',url:url}).done(function(result) 
 				{
-					console.log('go!');
-					$.ajax({method:'GET',url:url}).done(function(result) 
-					{
-						if (esp == 'fancontrol') fancontrol();
-					});
-				}, 3);
-			});
+					if (esp == 'fancontrol') fancontrol();
+				});
+			}, 3));
 			
 			$(document).on('click','.rm-active',function()
 			{
