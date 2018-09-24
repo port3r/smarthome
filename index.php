@@ -45,6 +45,7 @@
 			//-- INIT
 			fancontrol();
 			wunderground();
+			gatecontrol();
 			//rtc();
 
 			//-- EVERY 1min.
