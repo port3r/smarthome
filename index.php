@@ -238,7 +238,7 @@
 			
 			function gatecontrol()
 			{
-				url = 'esp/gate.php?ping=on';
+				url = 'esp/gate.php?redirect=index';
 				$.ajax({method:'GET',url:url}).done(function(result) 
 				{
 					//console.log();
