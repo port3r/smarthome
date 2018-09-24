@@ -2,6 +2,12 @@
 	$localUrl = 'http://192.168.0.201';
 	if (!empty($_GET['redirect']))
 	{
+		// -- PING
+		if ($_GET['redirect'] == 'index')
+		{
+			$_GET['redirect'] = '';
+		}
+		
 		$content = implode('', file($localUrl .'/'. $_GET['redirect']));
 		echo $content;
 	}
