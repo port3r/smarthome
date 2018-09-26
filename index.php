@@ -29,13 +29,13 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png" />
 	
-	<link rel='stylesheet' href='/assets/bootstrap.min.css'>
-	<link rel='stylesheet' href='/assets/font-awesome.min.css'>
-	<link rel='stylesheet' href='/assets/simple-switch.min.css'>
+	<link rel='stylesheet' href='assets/bootstrap.min.css'>
+	<link rel='stylesheet' href='assets/font-awesome.min.css'>
+	<link rel='stylesheet' href='assets/simple-switch.min.css'>
 
-	<script src='/assets/jquery.min.js'></script>
-	<script src='/assets/bootstrap.min.js'></script>
-	<script src='/assets/jquery.simpleswitch.min.js'></script>
+	<script src='assets/jquery.min.js'></script>
+	<script src='assets/bootstrap.min.js'></script>
+	<script src='assets/jquery.simpleswitch.min.js'></script>
 
 	<script>
 		jQuery(function($)
