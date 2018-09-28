@@ -110,7 +110,7 @@
 					}
 					
 					//-- SET BATHROOM STATES
-					var shower = (fancontroldata.brHumidity >= 70) ? ' &nbsp;<i class="fa fa-shower" aria-hidden="true"></i>' : '';
+					var shower = (fancontroldata.brHumidity >= 70) ? ' &nbsp;<i class="fa fa-tint" aria-hidden="true"></i>' : '';
 					$('.fancontrol-brtemperature').html((Math.round(fancontroldata.brTemperature * 10) / 10) + '°');
 					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%' + shower);
 					
