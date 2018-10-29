@@ -115,11 +115,12 @@
 					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%' + shower);
 					
 					var brUpdateOn = new Date(fancontroldata.brUpdateOn * 1000);
-					
+					/*
 					if (isDST(brUpdateOn))
 					{
 						brUpdateOn = new Date((fancontroldata.brUpdateOn - 3600) * 1000);
 					}
+					*/
 					
 					var brHours = ("0" + brUpdateOn.getUTCHours()).slice(-2);
 					var brMinutes = ("0" + brUpdateOn.getUTCMinutes()).slice(-2);
