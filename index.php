@@ -241,6 +241,7 @@
 			
 			function isDST(d)
 			{
+				console.log(d.getTimezoneOffset());
 				var jan = new Date(d.getFullYear(), 0, 1);
 				var jul = new Date(d.getFullYear(), 6, 1);
  				return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());				
