@@ -115,12 +115,10 @@
 					$('.fancontrol-brhumidity').html(Math.round(fancontroldata.brHumidity) + '%' + shower);
 					
 					var brUpdateOn = new Date(fancontroldata.brUpdateOn * 1000);
-					/*
 					if (isDST(brUpdateOn))
 					{
 						brUpdateOn = new Date((fancontroldata.brUpdateOn - 3600) * 1000);
 					}
-					*/
 					
 					var brHours = ("0" + brUpdateOn.getUTCHours()).slice(-2);
 					var brMinutes = ("0" + brUpdateOn.getUTCMinutes()).slice(-2);
@@ -147,6 +145,10 @@
 					$('.fancontrol-wuhumidity').html(Math.round(fancontroldata.wuHumidity) + '%');
 					
 					var wuUpdateOn = new Date(fancontroldata.wuUpdateOn * 1000);
+					if (isDST(wuUpdateOn))
+					{
+						wuUpdateOn = new Date((fancontroldata.wuUpdateOn - 3600) * 1000);
+					}
 					var wuHours = ("0" + wuUpdateOn.getUTCHours()).slice(-2);
 					var wuMinutes = ("0" + wuUpdateOn.getUTCMinutes()).slice(-2);
 					$('.fancontrol-wuUpdateOn').html(wuUpdateOn.getUTCDate() + ' ' + months[wuUpdateOn.getUTCMonth()] + '. ' + wuHours + ':' + wuMinutes);
