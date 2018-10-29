@@ -246,9 +246,9 @@
  				var dst = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
 				if (d.getTimezoneOffset() == dst)
 				{
-					return TRUE;
+					return true;
 				}
-				return FALSE;		
+				return false;		
 			}
 			
 			function gatecontrol()
