@@ -241,10 +241,14 @@
 			
 			function isDST(d)
 			{
-				console.log(d.getTimezoneOffset());
 				var jan = new Date(d.getFullYear(), 0, 1);
 				var jul = new Date(d.getFullYear(), 6, 1);
- 				return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());				
+ 				var dst = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+				if (d.getTimezoneOffset() == dst)
+				{
+					return TRUE;
+				}
+				return FALSE;		
 			}
 			
 			function gatecontrol()
