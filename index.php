@@ -276,6 +276,7 @@
 					<li role="presentation"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 					<li role="presentation"><a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab">Vetranie</a></li>
 					<li role="presentation"><a href="#zahrada" aria-controls="zahrada" role="tab" data-toggle="tab">Záhrada</a></li>
+					<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-sliders" aria-hidden="true"></i></a></li>
 				</ul>
 
 				<br />
@@ -369,6 +370,12 @@
 							<li class='list-group-item'>Kvalita vody <span class='pull-right iost rm-active'> <a href="#zahrada-bazen" class="rm-active" aria-controls="zahrada-bazen" data-toggle="tab"><small class="sm-status zahrada-bazen-sm-status">PH 6.3, 26.4 &#8451;</small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li> 
 						</ul>
 					</div>
+					
+					<div role="tabpanel" class="tab-pane" id="settings">
+						<ul class='list-group'>
+							<li class='list-group-item'>Letný čas <span class='pull-right iost'><input type='checkbox' class='ios settings-dst' data-esp='' data-cmd='' unchecked /></span></li> 
+						</ul>
+					</div>					
 				</div>   
 
 			</div>
