@@ -119,7 +119,7 @@
 					var brMinutes = ("0" + brUpdateOn.getUTCMinutes()).slice(-2);
 					$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + ' ' + months[brUpdateOn.getUTCMonth()] + '. ' + brHours + ':' + brMinutes);
 					
-					isDST(fancontroldata.brUpdateOn * 1000);
+					isDST(brUpdateOn);
 					
 					if (fancontroldata.brControl == 'on') 
 					{
