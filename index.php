@@ -46,7 +46,6 @@
 			fancontrol();
 			wunderground();
 			gatecontrol();
-			isDST();
 			//rtc();
 
 			//-- EVERY 1min.
@@ -54,7 +53,6 @@
 			{ 
 			    fancontrol();
 			    gatecontrol();
-			    isDST();
 			}, 60000);
 			
 			//-- EVERY 5min.
@@ -120,7 +118,9 @@
 					var brHours = ("0" + brUpdateOn.getUTCHours()).slice(-2);
 					var brMinutes = ("0" + brUpdateOn.getUTCMinutes()).slice(-2);
 					$('.fancontrol-brUpdateOn').html(brUpdateOn.getUTCDate() + ' ' + months[brUpdateOn.getUTCMonth()] + '. ' + brHours + ':' + brMinutes);
-						
+					
+					isDST(fancontroldata.brUpdateOn * 1000);
+					
 					if (fancontroldata.brControl == 'on') 
 					{
 						$('.fancontrol-brControl').prop('checked', true).parent().removeClass('unchecked').addClass('checked');
@@ -239,10 +239,10 @@
 				});				
 			}
 			
-			function isDST()
+			function isDST(d)
 			{
-				var jan = new Date(this.getFullYear(), 0, 1);
-				var jul = new Date(this.getFullYear(), 6, 1);
+				var jan = new Date(d.getFullYear(), 0, 1);
+				var jul = new Date(d.getFullYear(), 6, 1);
  				return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());				
 			}
 			
