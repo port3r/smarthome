@@ -162,11 +162,12 @@
 					else 
 					{
 						$('.fancontrol-wuControl').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
-						$('.sm-status.fancontrol-wuhumidity').text('');
-						$('.sm-status.fancontrol-wutemperature').text('');
+						//$('.sm-status.fancontrol-wuhumidity').text('');
+						//$('.sm-status.fancontrol-wutemperature').text('');
 						$('.fancontrol-wuControl-sm-status').text('VYP.');
-						$('small.fancontrol-wuUpdateOn').text('');
-						$('li.wuControl').hide();
+						//$('small.fancontrol-wuUpdateOn').text('');
+						//$('li.wuControl').hide();
+						$('li.wuControl').show();
 					}					
 					
 					//-- SET FAN STATE
@@ -202,6 +203,10 @@
 						if (fancontroldata.manualFinish)
 						{
 							var manualFinishDate = new Date(fancontroldata.manualFinish * 1000);
+							if (isDST(manualFinishDate))
+							{
+								manualFinishDate = new Date((fancontroldata.manualFinish - 3600) * 1000);
+							}
 							var hours = ("0" + manualFinishDate.getUTCHours()).slice(-2);
 							var minutes = ("0" + manualFinishDate.getUTCMinutes()).slice(-2);
 							$('.fancontrol-manual-end').html('<br />do ' + manualFinishDate.getUTCDate() + ' ' + months[manualFinishDate.getUTCMonth()] + '. ' + hours + ':' + minutes);
