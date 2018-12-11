@@ -164,7 +164,7 @@
 						$('.fancontrol-wuControl').prop('checked', false).parent().removeClass('checked').addClass('unchecked');
 						//$('.sm-status.fancontrol-wuhumidity').text('');
 						//$('.sm-status.fancontrol-wutemperature').text('');
-						$('.fancontrol-wuControl-sm-status').text('VYP.');
+						$('.fancontrol-wuControl-sm-status').text(' VYP.');
 						//$('small.fancontrol-wuUpdateOn').text('');
 						//$('li.wuControl').hide();
 						$('li.wuControl').show();
