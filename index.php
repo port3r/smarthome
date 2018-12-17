@@ -343,7 +343,7 @@
 							<li class='list-group-item'><span class='manualormaintenance'>Manuálne spustenie</span> <small class='fancontrol-manual-end text-muted'></small> <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-manual' data-esp='fancontrol' unchecked /></span></li>
 							<li class='list-group-item'>Dovolenkový režim <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-vacation' data-esp='fancontrol' data-cmd='vacation' unchecked /></span></li>
 							<li class='list-group-item'>Letný režim <span class='pull-right iost rm-active'> <a href="#vetranie-summer" class="rm-active" aria-controls="vetranie-summer" data-toggle="tab"><small class="sm-status fancontrol-summer-sm-status"></small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li> 
-							<li class='list-group-item'>Reštart <span class='pull-right iost'><a href='javascript:void(0)' class='aos' data-esp='fancontrol' data-cmd='reboot'><i class="fa fa-refresh fa-2x" aria-hidden="true"></i></a></span></li>
+							<li class='list-group-item'>Reštart <span class='pull-right'><a href='javascript:void(0)' class='aos' data-esp='fancontrol' data-cmd='reboot'><i class="fa fa-refresh" aria-hidden="true"></i></a></span></li>
 						</ul>
 					</div>
 					
