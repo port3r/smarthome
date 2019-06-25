@@ -302,6 +302,7 @@
 					<li role="presentation"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 					<li role="presentation"><a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab">Vetranie</a></li>
 					<li role="presentation"><a href="#zahrada" aria-controls="zahrada" role="tab" data-toggle="tab">Záhrada</a></li>
+					<li role="presentation"><a href="#camera" aria-controls="camera" role="tab" data-toggle="tab"><i class="fa fa-camera" aria-hidden="true"></i></a></li>
 					<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-sliders" aria-hidden="true"></i></a></li>
 				</ul>
 
@@ -312,7 +313,7 @@
 					<div role="tabpanel" class="tab-pane active" id="dashboard">
 						<ul class='list-group'>
 							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li>
-							<li class='list-group-item'>Počasie&nbsp;<small class='fancontrol-wuUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><a href="#vetranie-wunderground" class="rm-active" aria-controls="vetranie-wunderground" data-toggle="tab"><small class='sm-status fancontrol-wutemperature'></small> &nbsp;<small class='sm-status fancontrol-wuhumidity'>!</small><small class="sm-status fancontrol-wuControl-sm-status"></small> &nbsp;<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li>
+							<li class='list-group-item'>Počasie&nbsp;<small class='fancontrol-wuUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><small class='sm-status fancontrol-wutemperature'></small> &nbsp;<small class='sm-status fancontrol-wuhumidity'>!</small><small class="sm-status fancontrol-wuControl-sm-status"></small></span></li>
 							<li class='list-group-item'>Počasie 
 									<span class='pull-right'>
 										<span class="label label-default wunderground-humidity"><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span> 
@@ -388,6 +389,10 @@
 							<li class='list-group-item'>Kvalita vody <span class='pull-right iost rm-active'> <a href="#zahrada-bazen" class="rm-active" aria-controls="zahrada-bazen" data-toggle="tab"><small class="sm-status zahrada-bazen-sm-status">PH 6.3, 26.4 &#8451;</small> &nbsp; <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> &nbsp; </a></span></li> 
 						</ul>
 					</div>
+					
+					<div role="tabpanel" class="tab-pane" id="camera">
+						
+					</div>						
 					
 					<div role="tabpanel" class="tab-pane" id="settings">
 						<ul class='list-group'>
