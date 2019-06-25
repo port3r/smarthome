@@ -313,7 +313,7 @@
 					<div role="tabpanel" class="tab-pane active" id="dashboard">
 						<ul class='list-group'>
 							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li>
-							<li class='list-group-item'>Počasie&nbsp;<small class='fancontrol-wuUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><small class='sm-status fancontrol-wutemperature'></small> &nbsp;<small class='sm-status fancontrol-wuhumidity'>!</small><small class="sm-status fancontrol-wuControl-sm-status"></small></span></li>
+							<li class='list-group-item'>Počasie&nbsp;<small class='fancontrol-wuUpdateOn text-muted'></small> <span class='pull-right'><small class='fancontrol-wutemperature'></small> &nbsp;<small class='fancontrol-wuhumidity'>!</small><small class="fancontrol-wuControl-sm-status"></small></span></li>
 							<li class='list-group-item'>Počasie 
 									<span class='pull-right'>
 										<span class="label label-default wunderground-humidity"><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span> 
@@ -391,7 +391,7 @@
 					</div>
 					
 					<div role="tabpanel" class="tab-pane" id="camera">
-						
+						<img src='http://yum4net.asuscomm.com:7373/cgi/video/video.cgi'>
 					</div>						
 					
 					<div role="tabpanel" class="tab-pane" id="settings">
