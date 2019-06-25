@@ -312,21 +312,12 @@
 					<div role="tabpanel" class="tab-pane active" id="dashboard">
 						<ul class='list-group'>
 							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li>
-							<li class='list-group-item'>
-								<h4 class='list-group-item-heading'>
-									Počasie - <span class='wunderground-location'></span>
-									<span class='pull-right wunderground-icon text-left'></span>
-								</h4>
-								<p class='list-group-item-text'>
+							<li class='list-group-item'>Počasie&nbsp;<small class='fancontrol-wuUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><a href="#vetranie-wunderground" class="rm-active" aria-controls="vetranie-wunderground" data-toggle="tab"><small class='sm-status fancontrol-wutemperature'></small> &nbsp;<small class='sm-status fancontrol-wuhumidity'>!</small><small class="sm-status fancontrol-wuControl-sm-status"></small> &nbsp;<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li>
+							<li class='list-group-item'>Počasie 
 									<span class='pull-right'>
 										<span class="label label-default wunderground-humidity"><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span> 
 										<span class="label label-success wunderground-temperature"></span>
-									</span>									
-									Aktualizované <span class='wunderground-date'></span><br />
-									Pocitová teplota <span class="wunderground-feelslike"></span><br /> 
-									Rosný bod <span class="wunderground-dewpoint"></span><br />
-									Tlak vzduchu <span class="wunderground-pressure"></span>
-								</p>
+									</span>							
 							</li>
 						</ul>					
 					</div>
@@ -336,7 +327,7 @@
 							<li class='list-group-item'>Stav vetrania <span class='pull-right iost'><span class='fancontrol-fanstate fa fa-cog fa-2x text-inverse'></span></li>
 							<li class='list-group-item'>Prich. vzduch &nbsp;<small class='fancontrol-airUpdateOn text-muted'></small> <span class='pull-right'><span class='fancontrol-airtemperature'></span> &nbsp;<span class='fancontrol-airhumidity'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i></span></span></li>
 							<li class='list-group-item'>Kúpeľňa &nbsp;<small class='fancontrol-brUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><a href="#vetranie-bathroom" class="rm-active" aria-controls="vetranie-bathroom" data-toggle="tab"><small class='sm-status fancontrol-brtemperature'></small> &nbsp;<small class='sm-status fancontrol-brhumidity'>!</small><small class="sm-status fancontrol-brControl-sm-status"></small> &nbsp;<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li>
-							<li class='list-group-item'>Počasie OWM &nbsp;<small class='fancontrol-wuUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><a href="#vetranie-wunderground" class="rm-active" aria-controls="vetranie-wunderground" data-toggle="tab"><small class='sm-status fancontrol-wutemperature'></small> &nbsp;<small class='sm-status fancontrol-wuhumidity'>!</small><small class="sm-status fancontrol-wuControl-sm-status"></small> &nbsp;<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li>
+							<li class='list-group-item'>Počasie&nbsp;<small class='fancontrol-wuUpdateOn text-muted'></small> <span class='pull-right rm-active sm-status'><a href="#vetranie-wunderground" class="rm-active" aria-controls="vetranie-wunderground" data-toggle="tab"><small class='sm-status fancontrol-wutemperature'></small> &nbsp;<small class='sm-status fancontrol-wuhumidity'>!</small><small class="sm-status fancontrol-wuControl-sm-status"></small> &nbsp;<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a></span></li>
 							<!--<li class='list-group-item'>Systémová teplota <span class='pull-right fancontrol-systemp'><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Načítavam&hellip;</span></li>-->
 							<li class='list-group-item'>Vypnúť <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-off' data-esp='fancontrol' data-cmd='off' unchecked /></span></li>
 							<li class='list-group-item'>Logovanie <span class='pull-right iost'><input type='checkbox' class='ios fancontrol-logger' data-esp='fancontrol' data-cmd='logger' unchecked /></span></li>
