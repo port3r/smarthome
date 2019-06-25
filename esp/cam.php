@@ -11,7 +11,7 @@
 		if ($_GET['redirect'] == 'fb_stop')
 		{
 			file($localUrl .'/?action=command&command=lr_stop');
-			delay(2000);
+			sleep(2000);
 		}
 		
 		$content = implode('', file($localUrl .'/?action=command&command='. $_GET['redirect']));
