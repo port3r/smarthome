@@ -287,8 +287,8 @@
 		.iost{position:relative;top:-6px;}
 		.sm-status{position:relative;top:-4px;}
 		.label{font-size: 100% !important;}
-		.cam-left{position:absolute;top:190px;left:25px}
-		.cam-right{position:absolute;top:190px;left:300px}
+		.cam-left{position:absolute;top:195px;left:25px}
+		.cam-right{position:absolute;top:195px;left:300px}
 		.cam-up{position:absolute;top:100px;left:160px}
 		.cam-down{position:absolute;top:295px;left:160px}
 	</style>
