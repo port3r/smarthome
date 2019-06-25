@@ -398,7 +398,7 @@
 							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='move_backward'><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a>
 							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='move_forward'><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></a>
 						</p>
-						<iframe src='http://yum4net.asuscomm.com:7373/test.html'></iframe>
+						<!-- <iframe src='http://yum4net.asuscomm.com:7373/test.html'></iframe> -->
 						<!-- <img src='http://yum4net.asuscomm.com:7373/cgi/video/video.cgi'> -->
 					</div>						
 					
