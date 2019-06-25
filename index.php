@@ -391,6 +391,11 @@
 					</div>
 					
 					<div role="tabpanel" class="tab-pane" id="camera">
+						<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='toggle'><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+						<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='toggle'><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></a>
+						<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='toggle'><i class="fa fa-arrow-pause fa-2x" aria-hidden="true"></i></a>
+						<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='toggle'><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a>
+						<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='toggle'><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></a>
 						<img src='http://yum4net.asuscomm.com:7373/cgi/video/video.cgi'>
 					</div>						
 					
