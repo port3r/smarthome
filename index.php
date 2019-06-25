@@ -287,6 +287,10 @@
 		.iost{position:relative;top:-6px;}
 		.sm-status{position:relative;top:-4px;}
 		.label{font-size: 100% !important;}
+		.cam-left{position:absolute;top:215px;left:25px}
+		.cam-right{position:absolute;top:215px;left:300px}
+		.cam-up{position:absolute;top:125px;left:160px}
+		.cam-down{position:absolute;top:295px;left:160px}
 	</style>
 
 	<title>My Home Assistant</title>
@@ -392,11 +396,11 @@
 					
 					<div role="tabpanel" class="tab-pane" id="camera">
 						<p>
-							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='move_left'><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
-							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='move_right'><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></a>
+							<a href='javascript:void(0)' class='aos cam-left' data-esp='cam' data-cmd='move_left'><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+							<a href='javascript:void(0)' class='aos cam-right' data-esp='cam' data-cmd='move_right'><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></a>
 							<!-- <a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='fb_stop'><i class="fa fa-pause fa-2x" aria-hidden="true"></i></a> -->
-							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='move_backward'><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a>
-							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='move_forward'><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></a>
+							<a href='javascript:void(0)' class='aos cam-up' data-esp='cam' data-cmd='move_backward'><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a>
+							<a href='javascript:void(0)' class='aos cam-down' data-esp='cam' data-cmd='move_forward'><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></a>
 						</p>
 						<!-- <iframe src='http://yum4net.asuscomm.com:7373/test.html'></iframe> -->
 						<img src='http://yum4net.asuscomm.com:7373/cgi/video/video.cgi'>
