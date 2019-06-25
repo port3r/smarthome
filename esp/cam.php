@@ -8,6 +8,12 @@
 			$_GET['redirect'] = '';
 		}
 		
+		if ($_GET['redirect'] == 'fb_stop')
+		{
+			file($localUrl .'/?action=command&command=lr_stop');
+			delay(1000);
+		}
+		
 		$content = implode('', file($localUrl .'/?action=command&command='. $_GET['redirect']));
 		echo $content;
 	}
