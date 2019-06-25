@@ -8,7 +8,7 @@
 			$_GET['redirect'] = '';
 		}
 		
-		$content = implode('', file($localUrl .'/'. $_GET['redirect']));
+		$content = implode('', file($localUrl .'/?action=command&command='. $_GET['redirect']));
 		echo $content;
 	}
 	else
