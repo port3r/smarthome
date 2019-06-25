@@ -394,7 +394,7 @@
 						<p>
 							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='move_left'><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
 							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='move_right'><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></a>
-							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='fb_stop'><i class="fa fa-pause fa-2x" aria-hidden="true"></i></a>
+							<!-- <a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='fb_stop'><i class="fa fa-pause fa-2x" aria-hidden="true"></i></a> -->
 							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='move_backward'><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a>
 							<a href='javascript:void(0)' class='aos' data-esp='cam' data-cmd='move_forward'><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></a>
 						</p>
