@@ -299,9 +299,31 @@
 	<div class='container-fluid'>   
 		<div class='row'>     
 			<div class='col-md-12'>  
-				<br />
+				<nav class="navbar navbar-default navbar-static-top"> 
+					<div class="container-fluid"> 
+						<div class="navbar-header"> 
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-8" aria-expanded="false"> 
+								<span class="sr-only">Toggle navigation</span> 
+								<span class="icon-bar"></span> 
+								<span class="icon-bar"></span> 
+								<span class="icon-bar"></span> 
+							</button> 
+							<a href="#" class="navbar-brand">Home Assistant</a> 
+						</div> 
+						<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-8" aria-expanded="false"> 
+							<ul class="nav navbar-nav" role="tablist">
+								<li role="presentation"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+								<li role="presentation" class="active"><a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab" aria-expanded="true">Vetranie</a></li>
+								<li role="presentation" class=""><a href="#zahrada" aria-controls="zahrada" role="tab" data-toggle="tab" aria-expanded="false">Záhrada</a></li>
+								<li role="presentation" class=""><a href="#camera" aria-controls="camera" role="tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-camera" aria-hidden="true"></i></a></li>
+								<li role="presentation" class=""><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-sliders" aria-hidden="true"></i></a></li>
+							</ul> 
+						</div> 
+					</div> 
+				</nav>				
 				<!--<h2>MyHome <a href='/smarthome'><button class='btn btn-default btn-lg'><span class='fa fa-refresh' aria-hidden='true'></span></button></a></h2> -->
 				<!-- Nav tabs -->
+				<!--
 				<ul class="nav nav-pills" role="tablist">
 					<li role="presentation"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 					<li role="presentation"><a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab">Vetranie</a></li>
@@ -309,7 +331,7 @@
 					<li role="presentation"><a href="#camera" aria-controls="camera" role="tab" data-toggle="tab"><i class="fa fa-camera" aria-hidden="true"></i></a></li>
 					<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-sliders" aria-hidden="true"></i></a></li>
 				</ul>
-
+				-->
 				<br />
 
 				<!-- Tab panes -->
