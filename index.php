@@ -309,7 +309,7 @@
 								<span class="icon-bar"></span> 
 								<span class="icon-bar"></span> 
 							</button> 
-							<!-- <a href="#" class="navbar-brand">Home Assistant</a>  --> 
+							<div class="visible-xs"><a href="#" class="navbar-brand">Home Assistant</a></div>
 						</div> 
 						<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-8" aria-expanded="false"> 
 							<ul class="nav navbar-nav" role="tablist">
