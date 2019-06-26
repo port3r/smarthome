@@ -287,10 +287,11 @@
 		.iost{position:relative;top:-6px;}
 		.sm-status{position:relative;top:-4px;}
 		.label{font-size: 100% !important;}
-		.cam-left{position:absolute;top:195px;left:25px}
-		.cam-right{position:absolute;top:195px;left:300px}
-		.cam-up{position:absolute;top:100px;left:160px}
-		.cam-down{position:absolute;top:295px;left:160px}
+		.cam-left{position:absolute;top:100px;left:10px}
+		.cam-right{position:absolute;top:100px;left:285px}
+		.cam-up{position:absolute;top:10px;left:150px}
+		.cam-down{position:absolute;top:205px;left:150px}
+		#camera{position:relative}
 	</style>
 
 	<title>My Home Assistant</title>
@@ -308,7 +309,7 @@
 								<span class="icon-bar"></span> 
 								<span class="icon-bar"></span> 
 							</button> 
-							<a href="#" class="navbar-brand">Home Assistant</a> 
+							<!-- <a href="#" class="navbar-brand">Home Assistant</a>  --> 
 						</div> 
 						<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-8" aria-expanded="false"> 
 							<ul class="nav navbar-nav" role="tablist">
