@@ -333,7 +333,6 @@
 					<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-sliders" aria-hidden="true"></i></a></li>
 				</ul>
 				-->
-				<br />
 
 				<!-- Tab panes -->
 				<div class="tab-content">
