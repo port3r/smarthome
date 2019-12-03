@@ -313,8 +313,8 @@
 						</div> 
 						<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-8" aria-expanded="false"> 
 							<ul class="nav navbar-nav" role="tablist">
-								<li role="presentation"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-								<li role="presentation" class="active"><a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab" aria-expanded="true">Vetranie</a></li>
+								<li role="presentation" class="active"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+								<li role="presentation" class=""><a href="#vetranie" aria-controls="vetranie" role="tab" data-toggle="tab" aria-expanded="true">Vetranie</a></li>
 								<li role="presentation" class=""><a href="#zahrada" aria-controls="zahrada" role="tab" data-toggle="tab" aria-expanded="false">Záhrada</a></li>
 								<li role="presentation" class=""><a href="#camera" aria-controls="camera" role="tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-camera" aria-hidden="true"></i></a></li>
 								<li role="presentation" class=""><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-sliders" aria-hidden="true"></i></a></li>
@@ -425,7 +425,8 @@
 							<a href='javascript:void(0)' class='aos cam-down' data-esp='cam' data-cmd='move_forward'><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></a>
 						</p>
 						<!-- <iframe src='http://yum4net.asuscomm.com:7373/test.html'></iframe> -->
-						<img src='http://yum4net.asuscomm.com:7373/cgi/video/video.cgi'>
+						<!-- <img src='http://yum4net.asuscomm.com:7373/cgi/video/video.cgi'> -->
+						<img src='http://yum4net.ddns.net:7373/cgi/video/video.cgi'>
 					</div>						
 					
 					<div role="tabpanel" class="tab-pane" id="settings">
