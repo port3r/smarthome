@@ -426,7 +426,7 @@
 						</p>
 						<!-- <iframe src='http://yum4net.asuscomm.com:7373/test.html'></iframe> -->
 						<!-- <img src='http://yum4net.asuscomm.com:7373/cgi/video/video.cgi'> -->
-						<img src='http://yum4net.ddns.net:7373/cgi/video/video.cgi'>
+						<img src='esp/video.php'>
 					</div>						
 					
 					<div role="tabpanel" class="tab-pane" id="settings">
