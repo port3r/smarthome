@@ -16,7 +16,7 @@ Requirements: php5+ compiled with --enable-shmop
 
 // These settings would read an mjpeg stream from http://192.168.1.1:80/videostream.cgi?user=admin&password=pass
 $host = "192.168.0.73";
-$port = "";
+$port = "80";
 $url = "/cgi/video/video.cgi";
 
 // Image settings:
