@@ -281,8 +281,9 @@
 			}
 			setInterval(function() 
 			{
-    				var d = new Date();
-				$("#focus73").attr("src", "esp/cam.php?"+d.getTime());
+    				var d = new Date(),
+				    is = $('.nav li.active #camera).lenght();
+				if (is) $("#focus73").attr("src", "esp/cam.php?"+d.getTime());
 			}, 1000);
 		});
 	</script>
