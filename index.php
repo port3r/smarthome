@@ -279,6 +279,11 @@
 				setTimeout(function(){element.removeData("isclicked");}, delaytime);
 				return false;
 			}
+			setInterval(function() 
+			{
+    				var d = new Date();
+				$("#focus73").attr("src", "esp/cam.php?"+d.getTime());
+			}, 2000);
 		});
 	</script>
 	
