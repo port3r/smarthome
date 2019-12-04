@@ -21,5 +21,5 @@
 	{
 		header('Content-Type: multipart/x-mixed-replace; boundary=myboundary');
     		ob_end_flush();
-    		readfile('http://'. $localUrl .'/cgi/video/video.cgi');
+    		readfile('http://'. $localUrl .'/axis-cgi/mjpg/video.cgi');
 	}	
