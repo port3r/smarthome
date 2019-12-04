@@ -21,5 +21,5 @@
 	{
 		header('Content-Type: multipart/x-mixed-replace; boundary=myboundary');
     		ob_end_flush();
-    		readfile('http://'. $localUrl .'/video.cgi?resolution=VGA');
+    		readfile('http://'. $localUrl .'/-wvhttp-01-/video.cgi');
 	}	
