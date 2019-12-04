@@ -19,7 +19,11 @@
 	}
 	else
 	{
+		/*
 		header('Content-Type: multipart/x-mixed-replace; boundary=myboundary');
     		ob_end_flush();
     		readfile('http://'. $localUrl .'/-wvhttp-01-/video.cgi');
+		*/
+		header('Content-Type: image/jpeg');
+  		readfile($localUrl .'/cgi/jpg/image.cgi');
 	}	
