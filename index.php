@@ -427,9 +427,6 @@
 						<!-- <iframe src='http://yum4net.asuscomm.com:7373/test.html'></iframe> -->
 						<!-- <img src='http://yum4net.asuscomm.com:7373/cgi/video/video.cgi'> -->
 						<img src='esp/video.php'>
-						<video controls autoplay width="640" height="480">
-							<source src="esp/video.php" type="application/x-mpegURL">
-						</video>
 					</div>						
 					
 					<div role="tabpanel" class="tab-pane" id="settings">
