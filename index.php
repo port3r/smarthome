@@ -282,7 +282,7 @@
 			setInterval(function() 
 			{
     				var d = new Date(),
-				    is = $('.nav li.active #camera).lenght();
+				    is = $('.nav li.active #camera).length;
 				if (is) $("#focus73").attr("src", "esp/cam.php?"+d.getTime());
 			}, 1000);
 		});
