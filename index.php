@@ -426,7 +426,7 @@
 						</p>
 						<!-- <iframe src='http://yum4net.asuscomm.com:7373/test.html'></iframe> -->
 						<!-- <img src='http://yum4net.asuscomm.com:7373/cgi/video/video.cgi'> -->
-						<img src='esp/cam.php' width='320' height='240' />
+						<img id='focus73' src='esp/cam.php' width='320' height='240' />
 					</div>						
 					
 					<div role="tabpanel" class="tab-pane" id="settings">
