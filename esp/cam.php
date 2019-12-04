@@ -19,6 +19,7 @@
 	}
 	else
 	{
-		$content = implode('', file($localUrl .'/getdata.js'));
-		echo $content;
+		header('Content-Type: multipart/x-mixed-replace; boundary=myboundary');
+    		ob_end_flush();
+    		readfile('http://'. $localUrl .'/cgi/video/video.cgi');
 	}	
