@@ -283,7 +283,7 @@
 			{
     				var d = new Date();
 				$("#focus73").attr("src", "esp/cam.php?"+d.getTime());
-			}, 500);
+			}, 1000);
 		});
 	</script>
 	
