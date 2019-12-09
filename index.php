@@ -431,8 +431,8 @@
 							<a href='javascript:void(0)' class='aos cam-down' data-esp='cam' data-cmd='move_forward'><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></a>
 						</p>
 						<!-- <iframe src='http://yum4net.asuscomm.com:7373/test.html'></iframe> -->
-						<!-- <img src='http://yum4net.asuscomm.com:7373/cgi/video/video.cgi'> -->
-						<img id='focus73' src='esp/cam.php' width='320' height='240' />
+						<img src='http://yum4server.asuscomm.com:7373/cgi/video/video.cgi'> 
+						<!-- <img id='focus73' src='esp/cam.php' width='320' height='240' /> -->
 					</div>						
 					
 					<div role="tabpanel" class="tab-pane" id="settings">
