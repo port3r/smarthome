@@ -45,14 +45,14 @@
 			//-- INIT
 			fancontrol();
 			wunderground();
-			gatecontrol();
+			//gatecontrol();
 			//rtc();
 
 			//-- EVERY 1min.
 			setInterval(function()
 			{ 
 			    fancontrol();
-			    gatecontrol();
+			    //gatecontrol();
 			}, 60000);
 			
 			//-- EVERY 5min.
